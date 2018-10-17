@@ -28,18 +28,31 @@ img, embed, object,video {
 	grid-column-end: 5;
 	text-align: center;
 	color: white;
+	margin: auto;
+	width: 100%;
+	padding: 3px;
+
 }
 
 .konten {
 
 	grid-column: 4/5;
 	border-radius: 10px;
+	padding-top: 40px;
 	text-align: center;
-	
+
 }
+
+div .konten {
+	font-size: 1em;
+}
+
+
 
 .kalkulator {
 	background-color: #45687b;
+
+
 }
 
 .mapbox {
@@ -54,6 +67,7 @@ img, embed, object,video {
 	grid-row: 2/5;
 	grid-column: 1/4;
 	display: grid;
+	background-color: grey;
 }
 
 
@@ -61,10 +75,13 @@ img, embed, object,video {
 	grid-column: 1/2;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 10px;
 }
 
 .sidebar .gambar img {
-border-radius: 100px;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
 }
 
 .tulisan {
@@ -74,7 +91,7 @@ border-radius: 100px;
 
 .tulisan div {
 margin-top: 5px;
-font-size: 1.5vw;
+font-size: 0.75em;
 }
 
 .footer {
@@ -83,12 +100,80 @@ font-size: 1.5vw;
 	grid-column: 1/5;
 	color: white;
 	text-align: center;
+	width: 100%;
+	margin: auto;
+	padding: 10px;
+
+	
 }
 
 .footer a {
 	color: white;
-	margin-right: 30px;
-	font-size: 1.5vw;
+	margin-right: 1em;
+	font-size: 0.7em;
+}
+
+@media screen and (max-width: 230px)  {
+	.footer a{
+		font-size: 0.6em;
+	}
+
+	.tulisan div {
+		font-size: 0.6em;
+	}
+	.konten {
+		font-size: 0.5em;
+	}
+}
+
+@media screen and (max-width: 293px) {
+	.sidebar .gambar img {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	
+}
 }
 
 
+@media screen and (min-width: 230px)  {
+	.footer a{
+		font-size: 0.8em;
+	}
+
+	.tulisan div {
+		font-size: 0.8em;
+	}
+
+	.konten {
+		font-size: 0.6em;
+	}
+}
+
+@media screen and (min-width: 320px) {
+	.footer a{
+		font-size: 0.8em;
+	}
+
+	.tulisan div {
+		font-size: 0.8em;
+		
+	}
+}
+
+
+@media screen and (min-width: 533px) {
+	.footer a{
+		font-size: 1em;
+	}
+
+	.tulisan div {
+		font-size: 1em;
+	}
+}
+
+@media screen and (min-width: 560px) {
+	.container {
+		margin: 100px;
+	}
+}
