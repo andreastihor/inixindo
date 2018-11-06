@@ -7,15 +7,20 @@ html, body, #mapid {
 	margin: 0; 
 }
 
-img, embed, object,video {
+
+.thumbnail {
 	max-width: 100%;
 }
+
+.leaflet-popup-content-wrapper {
+	width: 350px;
+}
+
 
 .container {   
 	display: grid;  
 	height: 100%;    
-	grid-gap: 4px;  
-	grid-template-columns: repeat(8,1fr);   
+	grid-gap: 4px;     
 	grid-template-rows: 60% 40%;
 } 
 
@@ -26,11 +31,100 @@ img, embed, object,video {
 } 
 
 .gambar {    
-	background-color: grey;   
-	grid-column: 1/6;
+	background-color: grey;  
+	display: flex;
+	flex-direction: row;
+	grid-column: 1/5;
 } 
 
-.review {    
-	background-color: #839eaa; 
-	grid-column:6/-1; 
+
+.gambar .tulisan {
+	display: flex;
+	flex-direction: column;
+}
+
+.gambar img {
+	max-width : 50%;
+
+
+}
+
+.tulisan {
+	width: 50%;
+}
+
+.tulisan h4 {
+	text-align: center;
+	margin-right: 30px;
+	font-size: 2em;
+}
+
+.tulisan p {
+	font-size: 1.5em;
+	margin: 30px;
+	margin-right: 50px;
+	text-align: center;
+}
+
+
+@media screen and (max-width: 807px) {
+	
+.tulisan h4 {
+	
+	font-size: 1.5em;
+}
+
+.tulisan p {
+	font-size: 1.5em;
+	
+}
+
+
+}
+
+@media screen and (max-width: 630px ) {
+	
+.tulisan h4 {
+	
+	font-size: 1.2em;
+}
+
+.tulisan p {
+	font-size: 1.2em;
+	
+}
+
+}
+
+
+
+
+@media screen and (max-width: 439px ) {
+	
+.tulisan h4 {
+	
+	font-size: 1em;
+	margin-left: 20px;
+}
+
+.tulisan p {
+	font-size: 1em;
+	
+}
+
+@media screen and (max-width: 299px ) {
+	
+.tulisan h4 {
+	
+	font-size: 0.8em;
+	margin-left: 20px;
+}
+
+.tulisan p {
+	font-size: 0.6em;
+	overflow-wrap: break-word;
+	
+}
+
+
 }

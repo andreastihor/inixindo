@@ -4,8 +4,39 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kalkulator</title>
+	<link rel="stylesheet" href="kalkulator.css">
 </head>
 <body>
-	Belum Jadi!
+
+	<h1 style="text-align: center;">Lets DO Math!!</h1>
+	<div class="container">
+	<input type="text" id="input1" onkeyup="calculate(this)"> 
+	<label for="">+</label>
+	<input type="text" id="input2" onkeyup="calculate(this)">
+	<label for="">=</label>
+	<input type="text" id="total">
+	</div>
+
+
+
+
+	<script>
+		var input1=0;
+		var input2=0;
+		var total=0;
+
+		function calculate(data) {
+			
+			input1 = parseInt(document.getElementById('input1').value);
+			input2 = parseInt(document.getElementById('input2').value);
+			document.getElementById('total').value = parseInt(input1)+parseInt(input2);
+				
+		}
+
+
+
+
+	</script>
+
 </body>
 </html>
