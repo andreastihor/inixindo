@@ -1,0 +1,25 @@
+{
+	"locations" : [
+		{
+			"marker": [-6.187752, 106.739050],
+			"places" :"<b>Lippo Mall Puri</b> " ,
+			"img": "../project2/images/lpm.jpg" ,
+			"review": ""
+
+		},
+		{
+			"marker": [-6.244244, 106.653417],
+			"places" :  "<b>Living World</b>  ",
+			"img":  "../project2/images/lw.jpg" ,
+			"review": ""
+		},
+		{
+			"marker" :[-6.258007, 106.659351],
+			"places" : "<b>Bakmi Aka</b>",
+			"img":   "../project2/images/bakmiaka.jpg",
+			"review": ""
+		}
+
+
+	]
+}
