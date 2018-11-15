@@ -1,3 +1,18 @@
 .leaflet-popup-content-wrapper {
 	width: 100%;
 }
+
+
+
+.kontener{
+	
+}
+
+.tulisan{
+	padding-top: 20px;
+	text-align: center;
+}
+
+.kontener img{
+	width: 50%;
+}

@@ -9,28 +9,84 @@
 
    const url ="http://localhost/INIXINDO/public/project3/mws.json";
    // const url ="https://andreastihor-at1510.firebaseapp.com/project3/mws.json";
+   var places;
+    fetch('../project3/mws.json')
+    .then( (res) => res.json() )
+    .then((data) => getData(data.locations) );
 
-     function marker(arr_marker) {
-        var obj = arr_marker.locations;
-       for(let i =0;i<obj.length;i++) {
-        let x = L.marker(obj[i].marker).addTo(mymap);
-        x.bindPopup("<b>Lippo Mall Puri</b>");
+    
+    
+    
+    
+
+    function findLocation(x,y) {
+      for (var i = 0; i<places.length; i++) {
+        if(x===places[i].marker[0] && y===places[i].marker[1]) {
+          return i;
+        }
+      }
+      return -1;
+    }
+        // bikiin pas ketik ambil lat lang
+      // bandingin lat sama lang dengan data yang ada
+      //kalau ada baru panggil fungsi yang nambahin gambar sama review
+    
+    // for (var i = 0; i < places.length; i++) {
+    // if (places[i].lokasi[0] == x && places[i].lokasi[1] == y) {
+    //   return i;
+    //   }
+    // }
+    // return -1;
+  
+    function showLocation(e) {
+
+      let idx = findLocation(e.latlng.lat,e.latlng.lng);
+      
+      if(idx>=0) {
+
+        setImage(idx);
+        setReview(idx);
+      }
+    }
+
+    function getData(data) {
+      setMarker(data);
+      places = data;
+
+      
+    }
+
+     function setMarker(arr_marker) {
+     
+    
+       arr_marker.forEach( element => {
+        let mark = element.marker;
+        let title = element.places;
+        let x = L.marker(mark).addTo(mymap).bindPopup(title);
+        x.on('click',showLocation);
         
        }
+      );
         
         
     }
-   function image() {
-
+   function setImage(data) {
+    
+      document.getElementById('tulisan').innerHTML = places[data].review;
+      
     }
 
-    function review() {
-
+    function setReview(data) {
+      document.getElementById('gambar').src = places[data].img;
+      
     }
 
-    fetch(url).then( (data) => {return data.json();} ).then( (data) => {marker(data)} );
 
-    var popup = L.popup();
+
+
+
+
+    
 
     
 
