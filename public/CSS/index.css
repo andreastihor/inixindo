@@ -1,10 +1,18 @@
+
+
 a {
-	color: black;
+	color: white;
 	text-decoration: none;
 }
 
 body {
-	background-color: white;
+	  background: 
+  linear-gradient(135deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(225deg, black 25%, transparent 25%) -50px 0,
+  linear-gradient(315deg, black 25%, transparent 25%),
+  linear-gradient(45deg, black 25%, transparent 25%);	
+  background-size: 2em 2em;
+  background-color: #232323;
 }
 
 img, embed, object,video {
@@ -22,7 +30,7 @@ img, embed, object,video {
 }
 
 .menu {
-	background-color: black;
+	
 	/*grid-column: 1/4; sama aaja*/
 	grid-column-start: 1;    
 	grid-column-end: 5;
@@ -41,6 +49,7 @@ img, embed, object,video {
 	padding-top: 40px;
 	text-align: center;
 
+
 }
 
 div .konten {
@@ -49,25 +58,12 @@ div .konten {
 
 
 
-.kalkulator {
-	background-color: #45687b;
 
-
-}
-
-.mapbox {
-	background-color: #839eaa;
-}
-
-.konten3 {
-	background-color: #9db1ba;
-}
 
 .sidebar {
 	grid-row: 2/5;
 	grid-column: 1/4;
 	display: grid;
-	background-color: grey;
 }
 
 
@@ -87,6 +83,7 @@ div .konten {
 .tulisan {
 	text-align: center;
 	display: grid;
+	color: white;
 }
 
 .tulisan div {
@@ -96,13 +93,14 @@ font-size: 0.75em;
 
 .footer {
 	grid-row: 5;
-	background-color: black;
 	grid-column: 1/5;
 	color: white;
 	text-align: center;
 	width: 100%;
 	margin: auto;
 	padding: 10px;
+	position: absolute;
+	bottom: 0px;
 
 	
 }
@@ -171,3 +169,5 @@ font-size: 0.75em;
 		font-size: 1em;
 	}
 }
+
+
