@@ -1,0 +1,21 @@
+{
+  "short_name": "Tihor",
+  "name": "Andreas Tihor",
+  "icons": [
+    {
+      "src": "/images/me.jpg",
+      "type": "image/jpg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/me.jpg",
+      "type": "image/jpg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "background_color": "#13C7ED",
+  "display": "standalone",
+  "scope": ".",
+  "theme_color": "#A8EC16"
+}

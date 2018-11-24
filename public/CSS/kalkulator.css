@@ -12,5 +12,7 @@ body {
 
 .container {
 	border-style: dashed;
-	text-align: center; line-height: 500px;
+	text-align: center; 
+  width: 100%;
+  line-height: 500px;
 }
